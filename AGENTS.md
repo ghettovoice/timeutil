@@ -1,0 +1,42 @@
+# AGENTS.md
+
+This document provides quick access to the main development guidelines and style
+guides for the timeutil project. All contributors and AI agents should follow these
+guidelines when working on the codebase.
+
+## Core Guidelines
+
+### Go Base Style Guide
+
+**File:** `.devin/rules/go_base_guide.md`
+
+Comprehensive Go coding style guidelines based on Google's Go Style Guide with
+project-specific additions. Covers:
+
+- Naming conventions (packages, functions, variables, constants)
+- Code organization and file structure
+- Import management
+- Error handling patterns
+- Concurrency best practices
+- Performance considerations
+- Documentation standards
+
+### Go Testing Style Guide
+
+**File:** `.devin/rules/go_test_guide.md`
+
+Testing conventions and best practices for the project. Includes:
+
+- Test naming conventions
+- Table-driven test patterns
+- Test doubles and helpers
+- Test organization and structure
+- Benchmark and example guidelines
+- Error message standards
+- Mock and stub reuse practices
+
+## Usage Guidelines
+
+1. **Before making changes:** Read the relevant guidelines from the files above
+2. **During development:** Follow the coding standards and conventions outlined
+3. **Before committing:** Verify all guidelines have been followed

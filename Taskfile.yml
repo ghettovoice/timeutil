@@ -1,0 +1,38 @@
+version: "3"
+
+tasks:
+  test:
+    desc: Run all tests
+    vars:
+      PACKAGE: '{{.PACKAGE | default "..." }}'
+      TIMEOUT: '{{.TIMEOUT | default "1m" }}'
+      COVERAGE_FILE: '{{.COVERAGE_FILE | default "cover.out"}}'
+    cmd: go test -race -vet=all -timeout={{.TIMEOUT}} -covermode=atomic -coverprofile={{.COVERAGE_FILE}} {{.CLI_ARGS}} ./{{.PACKAGE}}
+
+  lint:
+    desc: Run golangci-lint
+    vars:
+      PACKAGE: '{{.PACKAGE | default "..." }}'
+    cmd: golangci-lint run {{.CLI_ARGS}} ./{{.PACKAGE}}
+
+  vuln:
+    desc: Run govulncheck
+    vars:
+      PACKAGE: '{{.PACKAGE | default "..." }}'
+    cmd: govulncheck {{.CLI_ARGS}} ./{{.PACKAGE}}
+
+  check:
+    desc: Run all checks (test, lint, vuln)
+    deps: [test, lint, vuln]
+
+  cov:
+    desc: View coverage report in browser
+    vars:
+      COVERAGE_FILE: '{{default "cover.out" .COVERAGE_FILE}}'
+    cmd: go tool cover -html={{.COVERAGE_FILE}}
+
+  doc:
+    desc: View documentation
+    cmd:
+      cmd: go doc -http
+      ignore_error: true
