@@ -3,7 +3,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/ghettovoice/timeutil.svg)](https://pkg.go.dev/github.com/ghettovoice/timeutil)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ghettovoice/timeutil)](https://goreportcard.com/report/github.com/ghettovoice/timeutil)
 [![Tests](https://github.com/ghettovoice/timeutil/actions/workflows/test.yml/badge.svg)](https://github.com/ghettovoice/timeutil/actions/workflows/test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/ghettovoice/timeutil/badge.svg?branch=master)](https://coveralls.io/github/ghettovoice/timeutil?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ghettovoice/timeutil/badge.svg?branch=main)](https://coveralls.io/github/ghettovoice/timeutil?branch=main)
 [![CodeQL](https://github.com/ghettovoice/timeutil/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ghettovoice/timeutil/actions/workflows/github-code-scanning/codeql)
 
 `timeutil` is a small Go package that provides serializable timers with automatic
